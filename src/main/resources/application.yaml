@@ -1,0 +1,36 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ProgettoPsw
+  datasource:
+    url: jdbc:mysql://localhost:3306/rovito
+    username: root
+    password: Marianna1&mysqlroot
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/myrealm/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/realms/myrealm
+
+keycloak:
+  resource: myclient
+  realm: myrealm
+  auth-server-url: http://localhost:8080/
+  credentials:
+    secret : u5kadDfKitzeDg8yux824bRa9tvvvlWW
+  use-resource-role-mappings: true
+
+
+auth-properties :
+  clientid : myclient
+  client-secret : u5kadDfKitzeDg8yux824bRa9tvvvlWW
+  usernameadmin : admin@admin.it
+  passwordadmin : admin
+  role : user
+

@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "keycloak.auth-properties.clientid",
+      "type": "java.lang.String",
+      "description": "Description for keycloak.auth-properties.clientid."
+    }
+  ]
+}
